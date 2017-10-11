@@ -1,0 +1,77 @@
+html, html body, html body section {
+  width: 100%;
+  height: 100%; }
+  html body, html body section body {
+    margin: 0; }
+    html body header {
+      width: 100%;
+      height: 5.12rem;
+      top: 0; }
+      html body header > div, html body body header > div {
+        width: 100%;
+        height: 1.72rem;
+        line-height: 1.72rem;
+        padding: 0 10px;
+        display: flex;
+        box-sizing: border-box;
+        background: #148ad2; }
+        html body header > div a {
+          display: block;
+          flex: 1;
+          text-align: center;
+          text-decoration: none;
+          color: #fff; }
+      html body header nav {
+        width: 100%;
+        height: 3.4rem;
+        background: #1183c9;
+        display: flex;
+        align-items: center; }
+        html body header nav div {
+          height: 1.36rem;
+          line-height: 1.36rem;
+          flex: 1;
+          margin: 10px;
+          border: 2px solid #58a9d8;
+          border-radius: 20px;
+          font-size: 0.72rem;
+          color: #fff;
+          text-align: center; }
+    html body section {
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap; }
+      html body section div {
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        height: 6.92rem;
+        align-items: flex-start;
+        color: #fff;
+        position: relative; }
+        html body section div:nth-child(1) {
+          background: url(../img/shishang.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div:nth-child(2) {
+          background: url(../img/keji.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div:nth-child(3) {
+          background: url(../img/tiyu.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div:nth-child(4) {
+          background: url(../img/caijing.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div:nth-child(5) {
+          background: url(../img/qiche.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div:nth-child(6) {
+          background: url(../img/jiaju.jpg) no-repeat center;
+          background-size: cover; }
+        html body section div span {
+          position: absolute;
+          left: 15px;
+          bottom: 15px;
+          font-size: 0.64rem; }
+
+/*# sourceMappingURL=pindao.css.map */

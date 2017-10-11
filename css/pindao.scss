@@ -1,0 +1,98 @@
+$sc:25;
+@mixin dis(){
+    display: flex;
+}
+html{
+    width: 100%;;
+    height: 100%;
+    body{
+        @extend html;
+        margin: 0;
+        header{
+            width: 100%;
+            height: (43+85)/$sc+rem;
+            top: 0;
+            &>div{
+                width: 100%;
+                height: 43/$sc+rem;
+                line-height: 43/$sc+rem;
+                padding: 0 10px;
+                @include dis;
+                box-sizing: border-box;
+                background: #148ad2;
+                a{
+                    display: block;
+                    flex: 1;
+                    text-align: center;
+
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            nav{
+                width: 100%;
+                height: 85/$sc+rem;
+                background: #1183c9;
+                @include dis;
+                align-items: center;
+                div{
+                    height: 34/$sc+rem;
+                    line-height: 34/$sc+rem;
+                    flex: 1;
+                    margin: 10px;
+                    border: 2px solid #58a9d8;
+                    border-radius: 20px;
+                    font-size: 18/$sc+rem;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+        section{
+            @extend html;
+            overflow-y: auto;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                margin: 0;
+                padding: 0;
+                width: 50%;
+                height: 173/$sc+rem;
+                align-items: flex-start;
+                color: #fff;
+                position: relative;
+                &:nth-child(1){
+                    background: url(../img/shishang.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                &:nth-child(2){
+                    background: url(../img/keji.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                &:nth-child(3){
+                    background: url(../img/tiyu.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                &:nth-child(4){
+                    background: url(../img/caijing.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                &:nth-child(5){
+                    background: url(../img/qiche.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                &:nth-child(6){
+                    background: url(../img/jiaju.jpg) no-repeat center;
+                    background-size: cover;
+                }
+                span{
+                    position: absolute;
+                    left: 15px;
+                    bottom: 15px;
+                    font-size: 16/$sc+rem;
+                }
+            }
+        }
+    }
+}
