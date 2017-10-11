@@ -1,6 +1,17 @@
-$sc:25;
-@mixin dis(){
-    display: flex;
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }
 html{
     width: 100%;;
@@ -8,90 +19,106 @@ html{
     body{
         @extend html;
         margin: 0;
-        header{
-            width: 100%;
-            height: (43+85)/$sc+rem;
-            top: 0;
-            &>div{
-                width: 100%;
-                height: 43/$sc+rem;
-                line-height: 43/$sc+rem;
-                padding: 0 10px;
-                @include dis;
-                box-sizing: border-box;
-                background: #148ad2;
-                a{
-                    display: block;
-                    flex: 1;
-                    text-align: center;
-
-                    text-decoration: none;
-                    color: #fff;
-                }
-            }
-            nav{
-                width: 100%;
-                height: 85/$sc+rem;
-                background: #1183c9;
-                @include dis;
-                align-items: center;
-                div{
-                    height: 34/$sc+rem;
-                    line-height: 34/$sc+rem;
-                    flex: 1;
-                    margin: 10px;
-                    border: 2px solid #58a9d8;
-                    border-radius: 20px;
-                    font-size: 18/$sc+rem;
-                    color: #fff;
-                    text-align: center;
-                }
-            }
-        }
-        section{
+        .box{
             @extend html;
-            overflow-y: auto;
-            flex: 1;
             display: flex;
-            flex-wrap: wrap;
-            div{
-                margin: 0;
-                padding: 0;
-                width: 50%;
-                height: 173/$sc+rem;
-                align-items: flex-start;
-                color: #fff;
-                position: relative;
-                &:nth-child(1){
-                    background: url(../img/shishang.jpg) no-repeat center;
-                    background-size: cover;
+            flex-direction: column;
+            header{
+                width: 100%;
+                height: 128px;
+                top: 0;
+                &>div{
+                    width: 100%;
+                    height: 43px;
+                    line-height: 43px;
+                    padding: 0 20px;
+                    display: flex;
+                    box-sizing: border-box;
+                    background: #148ad2;
+                    justify-content: space-between;
+                    a{
+                        display: block;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 24px;
+                    }
                 }
-                &:nth-child(2){
-                    background: url(../img/keji.jpg) no-repeat center;
-                    background-size: cover;
+                nav{
+                    width: 100%;
+                    height: 85px;
+                    background: #1183c9;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 27px;
+                    box-sizing: border-box;
+                    div{
+                        width: 100px;
+                        height: 34px;
+                        line-height: 34px;
+                        font-size: 18px;
+                        color: #fff;
+                        text-align: center;
+                        &:first-child{
+                            border: 2px solid #58a9d8;
+                            border-radius: 20px;
+                        }
+                    }
                 }
-                &:nth-child(3){
-                    background: url(../img/tiyu.jpg) no-repeat center;
-                    background-size: cover;
+            }
+            section{
+                @extend html;
+                overflow-y: auto;
+                flex: 1;
+                ul{
+                    @extend html;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    li{
+                        margin: 0;
+                        padding: 0;
+                        width: 50%;
+                        height: 50%;
+                        color: #fff;
+                        position: relative;
+                        &:nth-child(1){
+                            background: url(../img/shishang.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        &:nth-child(2){
+                            background: url(../img/keji.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        &:nth-child(3){
+                            background: url(../img/tiyu.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        &:nth-child(4){
+                            background: url(../img/caijing.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        &:nth-child(5){
+                            background: url(../img/qiche.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        &:nth-child(6){
+                            background: url(../img/jiaju.jpg) no-repeat center;
+                            background-size: cover;
+                        }
+                        span{
+                            position: absolute;
+                            left: 15px;
+                            bottom: 15px;
+                            font-size: 16px;
+                        }
+                    }
                 }
-                &:nth-child(4){
-                    background: url(../img/caijing.jpg) no-repeat center;
-                    background-size: cover;
-                }
-                &:nth-child(5){
-                    background: url(../img/qiche.jpg) no-repeat center;
-                    background-size: cover;
-                }
-                &:nth-child(6){
-                    background: url(../img/jiaju.jpg) no-repeat center;
-                    background-size: cover;
-                }
-                span{
-                    position: absolute;
-                    left: 15px;
-                    bottom: 15px;
-                    font-size: 16/$sc+rem;
-                }
+
             }
         }
     }
